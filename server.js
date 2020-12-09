@@ -14,6 +14,11 @@ app.get('/', async (req, res) => {
   // const articles = await Article.find().sort({createdAt: 'desc'}); //gives all the articles
   // // we can pass any object to index
   // res.render('articles/index', {articles: articles});
+  res.render('home');
+})
+
+app.get('/speakUp', (req,res) => {
+  res.render('speakUp');
 })
 
 // app.use('/articles', articleRouter);
