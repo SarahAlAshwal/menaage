@@ -2,6 +2,7 @@ const express = require("express");
 //const articleRouter = require('./routes/articles');
 const app = express();
 const mongoose = require('mongoose');
+app.use(express.static(__dirname + '/views/'));
 
 //mongoose.connect('mongodb://localhost/blog', { useNewUrlParser: true ,  useUnifiedTopology: true, useCreateIndex: true});
 
