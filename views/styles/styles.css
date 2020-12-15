@@ -1,3 +1,13 @@
+body{
+  font-family: STIXGeneral;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #6C6D70;
+}
+.mission{
+  margin-top: 0.5rem;
+}
 .carousel .slide{
   height: 100px;
   background-color: #EC7781;
@@ -14,10 +24,10 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 243px;
-  left: 230px;
-  top: 1191px;
+  height: 100%;
   background: #6C6D70;
+  margin-top: 1rem;
+  padding: 0.4rem;
 }
 .logo_footer{
   width: 220px;
@@ -28,9 +38,13 @@
 .sider{
   width: 327px;
   height: 467px;
-  left: 891px;
-  top: 423px;
+
   background: #ffffff;
+  margin-top: 0.5rem;
+}
+.sider_img{
+  width: 8rem;
+  height: 8rem;
 }
 h2{
   font-family: STIXGeneral;
