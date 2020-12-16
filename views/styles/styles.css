@@ -111,7 +111,8 @@ h2{
 }
 
 .speakForm{
-  background-color:rgb(180, 185, 209);
+  background-color:#9FB0DB;
+  margin: 0.5em;
 }
 .speakForm button {
   background-color: #EC7781;
@@ -119,9 +120,6 @@ h2{
   width: 70%;
 }
 
-.speakForm button:hover {
-  background-color: #6C6D70;
-}
 
 .center {
   display: flex;
