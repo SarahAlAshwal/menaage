@@ -72,3 +72,22 @@ h2{
   display: flex;
   justify-content: space-between;
 }
+
+.speakForm{
+  background-color:rgb(180, 185, 209);
+}
+.speakForm button {
+  background-color: #EC7781;
+  color: white;
+  width: 70%;
+}
+
+.speakForm button:hover {
+  background-color: #6C6D70;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
