@@ -22,5 +22,8 @@ app.get('/speakUp', (req,res) => {
   res.render('speakUp');
 })
 
+app.get('/contactus', (req,res) => {
+  res.render('contactus');
+})
 // app.use('/articles', articleRouter);
 app.listen(8000, ()=> console.log('app listening on port 8000'));
