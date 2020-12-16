@@ -16,33 +16,43 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="styles/styles.css"></link>
-    <title>MENA AGE</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  </link>
+  <title>MENA AGE</title>
 </head>
 
 <body>
 
   <div class="container">
     <%- include('partials/_header') %>
-  
-    <!-- slider -->
-    <%- include('partials/_slider') %>
-    <div class="mainContiner">
-      <div class="col">
-      <div class="mission">
-        <h2>Our Mission </h2>
-        <hr/>
-        <p class="mission_text" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div>
-        <%- include('partials/_work') %>
-      </div>
-    </div>
-    <div>
-      <%- include('partials/_sider')%>
-    </div>
-    </div>
-    <%- include('partials/_footer') %>
+
+      <!-- slider -->
+      <%- include('partials/_slider') %>
+        <div class="mainContiner">
+          <div class="col">
+            <div class="mission">
+              <h2>Our Mission </h2>
+              <hr />
+              <p class="mission_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div>
+              <%- include('partials/_work') %>
+            </div>
+          </div>
+          <div>
+            <div>
+              <%- include('partials/_sider')%>
+            </div>
+            <div>
+              <%- include('partials/_get_updated')%>
+            </div>
+          </div>
+        </div>
+        <%- include('partials/_footer') %>
   </div>
 </body>
 
