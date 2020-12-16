@@ -1,0 +1,74 @@
+body{
+  font-family: STIXGeneral;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #6C6D70;
+}
+.mission{
+  margin-top: 0.5rem;
+}
+.carousel .slide{
+  height: 100px;
+  background-color: #EC7781;
+}
+.logo_nav{
+  width: 110px;
+  height: 110px;
+  border-radius: 79%;
+}
+.footer{
+  font-family: STIXGeneral;
+  font-style: italic;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background: #6C6D70;
+  margin-top: 1rem;
+  padding: 0.4rem;
+}
+.logo_footer{
+  width: 220px;
+  height: 220px;
+  border-radius: 100%;
+  margin: 1rem;
+}
+.sider{
+  width: 327px;
+  height: 467px;
+
+  background: #ffffff;
+  margin-top: 0.5rem;
+}
+.sider_img{
+  width: 8rem;
+  height: 8rem;
+}
+h2{
+  font-family: STIXGeneral;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #6C6D70;
+}
+.mission_text{
+  font-family: STIXGeneral;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #6C6D70;
+}
+.mainContiner{
+  display: flex;
+  justify-content: space-between;
+}
