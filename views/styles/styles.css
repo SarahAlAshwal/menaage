@@ -112,20 +112,25 @@ button.btn.send{
 }
 
 .speakForm{
-  background-color:#9FB0DB;
-  margin: 0.5em;
+  background: #9FB0DB;
+  color: #ffffff;
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  text-align: flex-start;
+  margin: 0.5rem 0.5rem 0 0;
+  padding: 1rem 0 1rem 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.speakForm button {
-  background-color: #EC7781;
-  color: white;
-  width: 70%;
-}
-
 
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.work{
+  margin-bottom: 0.3rem;
+}
 .contact_us{
   background: #9FB0DB;
   color: #ffffff;
