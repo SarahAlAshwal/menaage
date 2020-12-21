@@ -12,7 +12,11 @@ app.use(express.urlencoded({extended: false}));
 
 //connect to mlab database
 
-mongoose.connect("mongodb+srv://menaUser:menaage123@cluster0.osql0.mongodb.net/mena-age?retryWrites=true&w=majority",{ useNewUrlParser: true ,  useUnifiedTopology: true, useCreateIndex: true});
+//mongoose.connect("mongodb+srv://menaUser:menaage123@cluster0.osql0.mongodb.net/mena-age?retryWrites=true&w=majority",{ useNewUrlParser: true ,  useUnifiedTopology: true, useCreateIndex: true});
+
+//to start the db sudo service mongod start
+mongoose.connect('mongodb://localhost/mena', { useNewUrlParser: true ,  useUnifiedTopology: true, useCreateIndex: true});
+
 mongoose.connection.once('open', ()=> {
   console.log('connected to the database');
 })
