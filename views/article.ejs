@@ -28,44 +28,27 @@
 
   <div class="container">
     <%- include('partials/_header') %>
-    <h1>Speak Up</h1>
-    <div class="mainContiner">
-      <div class="speakForm">
-        <div class="card" style="width: 100%; border: none; background-color: transparent; align-items: center;">
-          <div class="card-body" style="width: 90%;">
-            <form class="container text-white " action="/speakUp" method="POST">
-              <div class="mb-3">
-                <label class="form-label">Speak Up</label>
-                <input type="text" name="title" class="form-control" id="storyTitle" placeholder="Title">
-              </div>
-              <div class="mb-3">
-                <textarea type="text" name="message" class="form-control" id="story" placeholder="Message"></textarea>
-              </div>
-              <div class="mb-3 form-check">
-                <p>* Note:</p>
-                <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
-                  previewing layouts.</p>
-              </div>
-              <div class="center">
-                <button type="submit" class="btn send">Send</button>
-              </div>
-
-            </form>
-          </div>
+    <div class='container'>
+      <div class='container'>
+        <h1 class="mb-1"><%=article.title%></h1>
+        <div class="text-muted mb-2"><%=article.createdAt.toLocaleDateString()%></div>
+        <a href="/articles" class="btn">All Articles</a>
+      
+        <div>
+          <%- article.details %>
         </div>
-      </div>
-      <div>
         <div>
           <%- include('partials/_sider')%>
         </div>
         <div>
           <%- include('partials/_get_updated')%>
         </div>
-      </div>
+     
     </div>
 
-    <%- include('partials/_footer') %>
-  </div>
+     <%- include('partials/_footer') %>
+        
+        
+    </div>
+    </div>
 </body>
-
-</html>
