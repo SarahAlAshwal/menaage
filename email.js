@@ -39,11 +39,5 @@ main().catch(console.error);
 
 
 
-const transporter = nodemailer.createTransport({
-  service: "Gamil", 
-  auth: {
-    user: 'sa.alashwal@gmail.com',
-    pass: 'Shaba5763'
-  },
-})
+
 
