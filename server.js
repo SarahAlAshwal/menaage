@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const speakUPRouter = require('./routes/speakUp');
 const articlesRouter = require('./routes/blog/articles');
 const aboutUsRouter = require('./routes/aboutUs');
+const submitYourWork = require('./routes/getInvolved/submitYourWrok')
 
 
 
@@ -40,5 +41,6 @@ app.get('/contactus', (req,res) => {
 app.use('/speakUp', speakUPRouter);
 app.use('/articles', articlesRouter);
 app.use('/aboutUs', aboutUsRouter);
+app.use('/submitYourWork', submitYourWork);
 
 app.listen(8000, ()=> console.log('app listening on port 8000'));

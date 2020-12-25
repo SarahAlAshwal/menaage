@@ -1,17 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const nodemailer = require('nodemailer');
+const transporter = require('../email');
 
-
-const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com', 
-  port: 587,
-  secure: false,
-  auth: {
-    user: 'menaagewebsite@gmail.com',
-    pass: 'menaage1234'
-  },
-})
 
 router.get('/',(req,res) => {
   res.render('speakUp');
