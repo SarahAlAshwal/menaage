@@ -32,7 +32,7 @@
         <div class="speakForm">
           <div class="card" style="width: 100%; border: none; background-color: transparent; align-items: center;">
             <div class="card-body" style="width: 90%;">
-              <form class="container text-white " action="/submitYourWork" method="POST" id='myForm'>
+              <form class="container text-white " action="/submitYourWork" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
                   <label class="form-label">
                     <h1 class="text-light">Submit Your Work</h1>
@@ -40,7 +40,7 @@
                   <br />
                   <br />
                  
-                    <select class="custom-select " id="inputGroupSelect01" name="category">
+                    <select class="custom-select" id="inputGroupSelect01" name="category">
                       <option selected>None</option>
                       <option value="article">Article</option>
                       <option value="story">Story</option>
@@ -55,9 +55,7 @@
                 <div class="mb-3">
                   <textarea type="text" name="message" class="form-control" id="story" placeholder="Message"></textarea>
                 </div>
-                <div>
-                  <input type="file" id="myfile"  name="myfile"  multiple><br><br>
-                </div>
+                <input type="file" name="myfile"/>
                 <div class="mb-3 form-check">
                   <p>* Note:</p>
                   <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
