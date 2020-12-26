@@ -20,7 +20,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="../styles/styles.css">
   </link>
   <!-- App JS -->
   <title>MENA AGE</title>
@@ -29,33 +29,44 @@
 <body class="body">
 
   <div class="container">
-    <%- include('partials/_header') %>
+    <%- include('../partials/_header') %>
 
-      <h1 class="mb-4">Articles</h1>
-      <a href="/articles/new" class=" btn ">
-        New Article</a>
-      <div class='mainContainer'>
-        <div class="card" style="width: 100%; border: none; background-color: transparent;">
-          <% articles.forEach(article=> { %>
-            <div class="card mt-4">
-              <div class="card-body" style="width: 90%;">
-                <h4 class="card-title">
-                  <%= article.title %>
-                </h4>
-                <div class="card-subtitle mb-2 text-muted">
-                  <%= article.createdAt.toLocaleDateString() %>
+      <h1 class="mb-4">Live Interviews</h1>
+      <a href="/liveInterviews/new" class=" btn ">
+        New Live Interview</a>
+      <% liveInterviews.forEach(liveInterview=>{ %>
+        <a href="<%=liveInterview.videoUrl%>">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 mt-3">
+              <div class="card">
+                <div class="card-horizontal">
+                  <div class="img-square-wrapper">
+                    <!-- https://img.youtube.com/vi/<insert-youtube-video-id-here>/mqdefault.jpg
+ -->
+                    <!-- <img class="" src="<%=liveInterview.thumbnail%>" alt="Card image cap"> -->
+                    <img class="" src="https://img.youtube.com/vi/%3Cinsert-youtube-video-id-here%3E/mqdefault.jpg"
+                      alt="Card image cap">
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <%=liveInterview.title%>
+                    </h4>
+                    <div class="card-subtitle text-muted mb-2">
+                      <%=liveInterview.createdAt.toLocaleDateString()%>
+                    </div>
+                    <p class="card-text">
+                      <%=liveInterview.description%>
+                    </p>
+                  </div>
                 </div>
-                <div class="card-text mb-2">
-                  <%=article.description%>
-                </div>
-                <a href="articles/<%= article.id%>" ">Read more</a>
               </div>
             </div>
-           <% }) %>
+          </div>
         </div>
-    </div>
-    
-      <%- include('partials/_footer') %>
+        </a>
+        <% }) %>
+          <%- include('../partials/_footer') %>
   </div>
 </body>
 
