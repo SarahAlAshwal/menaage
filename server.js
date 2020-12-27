@@ -1,4 +1,5 @@
 const express = require("express");
+const methodOverride= require('method-override');
 const app = express();
 const mongoose = require('mongoose');
 
@@ -14,6 +15,7 @@ app.use(express.static(__dirname + '/views/'));
 
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended: false}));
+app.use(methodOverride('_method'));
 
 //connect to mlab database
 

@@ -35,7 +35,7 @@
       <a href="/liveInterviews/new" class=" btn ">
         New Live Interview</a>
       <% liveInterviews.forEach(liveInterview=>{ %>
-        <a href="<%=liveInterview.videoUrl%>">
+
         <div class="container-fluid">
           <div class="row">
             <div class="col-12 mt-3">
@@ -49,22 +49,37 @@
                       alt="Card image cap">
                   </div>
                   <div class="card-body">
-                    <h4 class="card-title">
-                      <%=liveInterview.title%>
-                    </h4>
-                    <div class="card-subtitle text-muted mb-2">
-                      <%=liveInterview.createdAt.toLocaleDateString()%>
+                    <div class="row">
+                      <div class="col">
+                    <a href="<%=liveInterview.videoUrl%>">
+                      <h4 class="card-title">
+                        <%=liveInterview.title%>
+                      </h4>
+                    </a>
+                    
+                        <div class="card-subtitle text-muted mb-2">
+                          <%=liveInterview.createdAt.toLocaleDateString()%>
+                        </div>
+                        <p class="card-text">
+                          <%=liveInterview.description%>
+                        </p>
+
+                      </div>
+                      <div class="col-sm-4">
+                        <a href="/liveInterviews/edit/<%= liveInterview.id %>" class="btn btn-info mb-2">
+                        Edit</a>
+                        <form action="/liveInterviews/<%= liveInterview.id%>?_method=DELETE " method="POST" class="d-inline">
+                          <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                      </div>
                     </div>
-                    <p class="card-text">
-                      <%=liveInterview.description%>
-                    </p>
                   </div>
+
                 </div>
               </div>
             </div>
           </div>
         </div>
-        </a>
         <% }) %>
           <%- include('../partials/_footer') %>
   </div>
