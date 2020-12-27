@@ -20,7 +20,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="../styles/styles.css">
   </link>
   <!-- App JS -->
   <title>MENA AGE</title>
@@ -29,32 +29,14 @@
 <body class="body">
 
   <div class="container">
-    <%- include('partials/_header') %>
-      <div class='container'>
-        <div class='container'>
-          <h1 class="mb-1">
-            <%=article.title%>
-          </h1>
-          <div class="text-muted mb-2">
-            <%=article.createdAt.toLocaleDateString()%>
-          </div>
-          <a href="/articles" class="btn">All Articles</a>
+    <%- include('../partials/_header') %>
 
-          <div>
-            <%- article.details %>
-          </div>
-          <div>
-            <%- include('partials/_sider')%>
-          </div>
-          <div>
-            <%- include('partials/_get_updated')%>
-          </div>
-
-        </div>
-
-        <%- include('partials/_footer') %>
-
-
-      </div>
+      <h1 class="mb-4"> New Live Interview</h1>
+      <form action="/liveInterviews/" method="POST">
+        <%- include('_form_fields') %>
+      </form>
+      <%- include('../partials/_footer') %>
   </div>
 </body>
+
+</html>
