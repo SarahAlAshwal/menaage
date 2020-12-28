@@ -20,7 +20,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="../styles/styles.css">
   </link>
   <!-- App JS -->
   <title>MENA AGE</title>
@@ -29,34 +29,17 @@
 <body class="body">
 
   <div class="container">
-    <%- include('partials/_header') %>
+    <%- include('../partials/_header') %>
 
-      <h1 class="mb-4">Articles</h1>
-      <a href="/articles/new" class=" btn ">
-        New Article</a>
-      <div class='mainContainer'>
-        <div class="card" style="width: 100%; border: none; background-color: transparent;">
-          <% articles.forEach(article=> { %>
-            <div class="card mt-4">
-              <div class="card-body" style="width: 90%;">
-                <h4 class="card-title">
-                  <%= article.title %>
-                </h4>
-                <div class="card-subtitle mb-2 text-muted">
-                  <%= article.createdAt.toLocaleDateString() %>
-                </div>
-                <div class="card-text mb-2">
-                  <%=article.description%>
-                </div>
-                <a href="articles/<%= article.id%>" ">Read more</a>
-              </div>
-            </div>
-           <% }) %>
-        </div>
+    <h1 class="mb-4">New Article</h1>
+
+    <form action="/articles" method="POST">
+      <%- include('_form_fields') %>
+    </form>
+
+
+  <%- include('../partials/_footer') %>
     </div>
-    
-      <%- include('partials/_footer') %>
-  </div>
 </body>
 
 </html>
