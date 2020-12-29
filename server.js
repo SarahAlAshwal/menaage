@@ -7,9 +7,10 @@ const mongoose = require('mongoose');
 const speakUPRouter = require('./routes/speakUp');
 const articlesRouter = require('./routes/blog/articles');
 const liveInterviewsRouter = require('./routes/blog/liveInterviews');
+const educationalVideosRouter = require('./routes/blog/educationalVideos');
 const aboutUsRouter = require('./routes/aboutUs');
 const contactUs = require('./routes/contactUs');
-const submitYourWork = require('./routes/getInvolved/submitYourWrok')
+const submitYourWork = require('./routes/getInvolved/submitYourWrok');
 
 
 
@@ -38,6 +39,7 @@ app.get('/', async (req, res) => {
 app.use('/speakUp', speakUPRouter);
 app.use('/articles', articlesRouter);
 app.use('/liveInterviews',liveInterviewsRouter);
+app.use('/educationalVideos', educationalVideosRouter);
 app.use('/aboutUs', aboutUsRouter);
 app.use('/submitYourWork', submitYourWork);
 app.use('/contactUs', contactUs);

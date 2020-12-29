@@ -30,12 +30,11 @@
 
   <div class="container">
     <%- include('../partials/_header') %>
-      <div class="container">
-        <h1 class="mb-4"> Edit Live Interview</h1>
-        <form action="/liveInterviews/<%= liveInterview.id %>?_method=PUT" method="POST">
-          <%- include('_form_fields') %>
-        </form>
-      </div>
+
+      <h1 class="mb-4"> New Educational Video</h1>
+      <form action="/educationalVideos/" method="POST">
+        <%- include('_form_fields') %>
+      </form>
       <%- include('../partials/_footer') %>
   </div>
 </body>
