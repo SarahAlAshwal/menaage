@@ -8,6 +8,7 @@ const speakUPRouter = require('./routes/speakUp');
 const articlesRouter = require('./routes/blog/articles');
 const liveInterviewsRouter = require('./routes/blog/liveInterviews');
 const aboutUsRouter = require('./routes/aboutUs');
+const contactUs = require('./routes/contactUs');
 const submitYourWork = require('./routes/getInvolved/submitYourWrok')
 
 
@@ -32,10 +33,6 @@ app.get('/', async (req, res) => {
   
 })
 
-app.get('/contactus', (req,res) => {
-  res.render('contactus');
-})
-
 
 
 app.use('/speakUp', speakUPRouter);
@@ -43,5 +40,6 @@ app.use('/articles', articlesRouter);
 app.use('/liveInterviews',liveInterviewsRouter);
 app.use('/aboutUs', aboutUsRouter);
 app.use('/submitYourWork', submitYourWork);
+app.use('/contactUs', contactUs);
 
 app.listen(8000, ()=> console.log('app listening on port 8000'));
