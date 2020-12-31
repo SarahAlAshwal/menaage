@@ -32,7 +32,6 @@
     <%- include('../partials/_header') %>
 
       <h1 class="mb-4">Articles</h1>
-      <a href="/articles/new" class="btn btn-success">New Article</a>
 
       <% articles.forEach(article=> { %>
         <div class="card mt-4">
@@ -51,10 +50,6 @@
               </div>
               <div class="col col-sm-4">
                 <a href="/articles/<%= article.slug %>" class="btn btn-primary mb-2">Read More</a>
-                <a href="/articles/edit/<%= article.id %>" class="btn btn-info mb-2 ">Edit</a>
-                <form action="/articles/<%= article.id %>?_method=DELETE" method="POST" class="d-inline">
-                  <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
               </div>
             </div>
           </div>

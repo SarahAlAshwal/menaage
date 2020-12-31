@@ -32,7 +32,7 @@
     <%- include('../partials/_header') %>
       <div class="container">
         <h1 class="mb-4"> Edit Live Interview</h1>
-        <form action="/liveInterviews/<%= liveInterview.id %>?_method=PUT" method="POST">
+        <form action="/admin/liveInterviews/<%= liveInterview.id %>?_method=PUT" method="POST">
           <%- include('_form_fields') %>
         </form>
       </div>

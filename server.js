@@ -11,6 +11,7 @@ const educationalVideosRouter = require('./routes/blog/educationalVideos');
 const aboutUsRouter = require('./routes/aboutUs');
 const contactUs = require('./routes/contactUs');
 const submitYourWork = require('./routes/getInvolved/submitYourWrok');
+const adminRouter = require('./routes/admin');
 
 
 
@@ -43,5 +44,5 @@ app.use('/educationalVideos', educationalVideosRouter);
 app.use('/aboutUs', aboutUsRouter);
 app.use('/submitYourWork', submitYourWork);
 app.use('/contactUs', contactUs);
-
+app.use('/admin',adminRouter);
 app.listen(8000, ()=> console.log('app listening on port 8000'));

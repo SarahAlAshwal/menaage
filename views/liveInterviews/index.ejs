@@ -32,8 +32,6 @@
     <%- include('../partials/_header') %>
 
       <h1 class="mb-4">Live Interviews</h1>
-      <a href="/liveInterviews/new" class=" btn ">
-        New Live Interview</a>
       <% liveInterviews.forEach(liveInterview=>{ %>
 
         <div class="container-fluid">
@@ -65,13 +63,7 @@
                         </p>
 
                       </div>
-                      <div class="col-sm-4">
-                        <a href="/liveInterviews/edit/<%= liveInterview.id %>" class="btn btn-info mb-2">
-                        Edit</a>
-                        <form action="/liveInterviews/<%= liveInterview.id%>?_method=DELETE " method="POST" class="d-inline">
-                          <button type="submit" class="btn btn-danger">Delete</button>
-                        </form>
-                      </div>
+                     
                     </div>
                   </div>
 
