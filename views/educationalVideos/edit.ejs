@@ -32,7 +32,7 @@
     <%- include('../partials/_header') %>
 
       <h1 class="mb-4"> Edit Educational Video</h1>
-      <form action="/educationalVideos/<%=educationalVideo.id%>?_method=PUT" method="POST">
+      <form action="/admin/educationalVideos/<%=educationalVideo.id%>?_method=PUT" method="POST">
         <%- include('_form_fields') %>
       </form>
       <%- include('../partials/_footer') %>

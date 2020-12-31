@@ -29,9 +29,10 @@
 <body class="body">
 
   <div class="container">
-    <%- include('../partials/_header') %>
 
-      <h1 class="mb-4">Educational Videos</h1>
+      <h2 class="mb-4">Educational Videos</h2>
+      <a href="/admin/educationalVideos/new" class=" btn ">
+        New Educational Videos </a>
       <% educationalVideos.forEach(educationalVideo=>{ %>
 
         <div class="container-fluid">
@@ -61,6 +62,13 @@
                         </p>
 
                       </div>
+                      <div class="col-sm-4">
+                        <a href="/admin/educationalVideos/edit/<%= educationalVideo.id %>" class="btn btn-info mb-2">
+                        Edit</a>
+                        <form action="/admin/educationalVideos/<%= educationalVideo.id%>?_method=DELETE " method="POST" class="d-inline">
+                          <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                      </div>
                     </div>
                   </div>
 
@@ -70,7 +78,6 @@
           </div>
         </div>
         <% }) %>
-          <%- include('../partials/_footer') %>
   </div>
 </body>
 
