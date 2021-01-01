@@ -3,14 +3,41 @@ const router = express.Router();
 const Article = require ('../models/article');
 const LiveInterviews = require("../models/liveInterviews");
 const EducationalVideos = require("../models/educationalVideos");
+const Team = require('../models/team');
 
 router.get('/', async(req,res)=>{
   const articles = await Article.find().sort({createdAt: 'desc'}); //gives all the articles
   const liveInterviews = await LiveInterviews.find().sort({createdAt: "desc"});
   const educationalVideos = await EducationalVideos.find().sort({createdAt: "desc",});
+  const team = await Team.find().sort({teamId: 1});
   // we can pass any object to index
-  res.render('admin/admin', {articles: articles, liveInterviews: liveInterviews, educationalVideos: educationalVideos});
+  
+  res.render('admin/admin', {articles: articles, liveInterviews: liveInterviews, educationalVideos: educationalVideos, team: team});
 })
+
+router.get('/team/new', (req,res) => {
+  res.render('team/new', {team: new Team()})
+} );
+
+router.get('/team/edit/:id', async (req, res) => {
+  const team = await Team.findById(req.params.id)
+  res.render('team/edit', { team: team })
+})
+router.post('/team', async (req, res, next) => {
+  req.team = new Team()
+  next()
+}, saveTeamAndRedirect('/team/new'))
+
+router.put('/team/:id', async (req, res, next) => {
+  req.team = await Team.findById(req.params.id)
+  next()
+}, saveTeamAndRedirect('/team/edit'))
+
+router.delete('/team/:id', async (req, res) => {
+  await Team.findByIdAndDelete(req.params.id)
+  res.redirect('/admin')
+})
+
 
 router.get('/articles/new', (req, res) => {
   res.render('articles/new', { article: new Article() })
@@ -150,6 +177,24 @@ function saveInterviewAndRedirict(path) {
       res.render(`liveInterviews/${path}`, { liveInterview: liveInterview });
     }
   };
+}
+
+
+function saveTeamAndRedirect(path) {
+  return async (req, res) => {
+    let team = req.team
+    team.name = req.body.name
+    team.image= req.body.image
+    team.teamId = req.body.teamId
+    team.position = req.body.position
+    team.details = req.body.details
+    try {
+      team = await team.save();
+      res.redirect('/admin')
+    } catch (e) {
+      res.render(`/admin${path}`, { team:team })
+    }
+  }
 }
 
 module.exports = router;

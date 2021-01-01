@@ -1,0 +1,25 @@
+<div class="form-group">
+  <label for="name">Name</label>
+  <input required value="<%= team.name %>" type="text" name="name" id="name" class="form-control">
+</div>
+<div class="form-group">
+  <label for="teamId">Team ID</label>
+  <input required value="<%= team.teamId %>" type="number" name="teamId" id="teamId" class="form-control">
+</div>
+<div class="form-group">
+  <label for="image">Image Link</label>
+  <input required value="<%= team.image %>" type="text" name="image" id="image" class="form-control">
+</div>
+<div class="form-group">
+  <label for="position">Position</label>
+  <input required value="<%= team.position %>" type="text" name="position" id="position" class="form-control">
+</div>
+<div class="form-group">
+  <label for="details">Details</label>
+  <textarea required name="details" id="details" class="form-control">
+    <%= team.details %>
+  </textarea>
+</div>
+
+<a href="/admin" class="btn btn-secondary">Cancel</a>
+<button type="submit" class="btn btn-primary">Save</button>

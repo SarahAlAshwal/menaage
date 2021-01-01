@@ -31,22 +31,27 @@
   <div class="container">
     <%- include('../partials/_header') %>
 
-    <h1 class="mb-4">Dashboard</h1>
-    <%- include('adminLiveInterviews')%>
-    <%- include('adminArticles') %>
-    <%- include('adminEducationalVideos') %>
-    <%- include('adminTeam') %>
-    
-    <div class="card-body ">
-      <form class="form-group" action="/admin/aboutus" method="POST">
-        <label for="mission">Mission</label>
-        <input  type="text" name="mession" id="mission" class="form-control">
-      <a href="/admin" class="btn btn-secondary">Cancel</a>
-      <button type="submit" class="btn btn-primary">Save</button>
-     </form>
-    </div>
-   
-    
+      <h1 class="mb-4">Team</h1>
+      <hr class="hr-primary w-15 hr-xl ml-0 mb-5">
+      <% team.forEach(teamMembers=>{ %>
+        <div class="row mb-5">
+          <div class="col-md-6 order-md-2">
+            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Personal Trainer 1"
+              class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
+          </div>
+          <div class="col-md-6 flex-valign text-md-right">
+            <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+              <% teamMembers.name%>
+            </h3>
+            <h5 class="my-0 font-weight-normal">
+              <em><% teamMembers.position%>/em>
+            </h5>
+            <hr class="hr-primary w-70 ml-0 ml-md-auto mr-md-0 mb-3">
+            <p><%teamMembers.details%></p>
+          </div>
+        </div>
+        <% }) %>
+          <%- include('../partials/_footer') %>
   </div>
 </body>
 

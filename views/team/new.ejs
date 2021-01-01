@@ -31,22 +31,11 @@
   <div class="container">
     <%- include('../partials/_header') %>
 
-    <h1 class="mb-4">Dashboard</h1>
-    <%- include('adminLiveInterviews')%>
-    <%- include('adminArticles') %>
-    <%- include('adminEducationalVideos') %>
-    <%- include('adminTeam') %>
-    
-    <div class="card-body ">
-      <form class="form-group" action="/admin/aboutus" method="POST">
-        <label for="mission">Mission</label>
-        <input  type="text" name="mession" id="mission" class="form-control">
-      <a href="/admin" class="btn btn-secondary">Cancel</a>
-      <button type="submit" class="btn btn-primary">Save</button>
-     </form>
-    </div>
-   
-    
+      <h1 class="mb-4"> New Team member</h1>
+      <form action="/admin/team" method="POST">
+        <%- include('_form_fields') %>
+      </form>
+      <%- include('../partials/_footer') %>
   </div>
 </body>
 

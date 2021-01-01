@@ -1,0 +1,30 @@
+<h2 class="mb-4">Team</h2>
+<a href="/admin/team/new" class=" btn "> New Team Member</a>
+<% team.forEach(teamMember=>{ %>
+<div class="card mt-4">
+  <div class="card-body">
+    <div class="row mb-5">
+      <div class="col-md-6 order-md-2">
+        <img src="<%= teamMember.image%>" alt=" <%= teamMember.name%>"
+          class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
+      </div>
+      <div class="col-md-6 flex-valign text-md-right">
+        <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+          <%= teamMember.name%>
+        </h3>
+        <h5 class="my-0 font-weight-normal">
+          <em><%= teamMember.position%></em>
+        </h5>
+        <hr class="hr-primary w-70 ml-0 ml-md-auto mr-md-0 mb-3">
+        <p><%= teamMember.details%></p>
+        <div class="col-sm-4">
+          <a href="/admin/team/edit/<%= teamMember.id %>" class="btn btn-info mb-2">Edit</a>
+          <form action="/admin/team/<%= teamMember.id%>?_method=DELETE " method="POST" class="d-inline">
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% }) %>
