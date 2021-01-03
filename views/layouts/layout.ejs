@@ -29,32 +29,21 @@
 <body class="body">
 
   <div class="container">
-    <%- include('partials/_header') %>
-      <div class='container'>
-        <div class='container'>
-          <h1 class="mb-1">
-            <%=article.title%>
-          </h1>
-          <div class="text-muted mb-2">
-            <%=article.createdAt.toLocaleDateString()%>
-          </div>
-          <a href="/articles" class="btn">All Articles</a>
-
+    <%- include('../partials/_header') %>
+      <div class="mainContiner">
+        <%- body %>
+        <div>
           <div>
-            <%- article.details %>
+            <%- include('../partials/_sider')%>
           </div>
           <div>
-            <%- include('partials/_sider')%>
+            <%- include('../partials/_get_updated')%>
           </div>
-          <div>
-            <%- include('partials/_get_updated')%>
-          </div>
-
         </div>
-
-        <%- include('partials/_footer') %>
-
-
       </div>
+
+      <%- include('../partials/_footer') %>
   </div>
 </body>
+
+</html>

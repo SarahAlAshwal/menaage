@@ -1,89 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
-    type="text/css" />
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="styles/styles.css">
-  </link>
-  <title>MENA AGE</title>
-</head>
-
-<body>
-
+<div>
   <div class="container">
-    <%- include('partials/_header') %>
-      <div class="container">
-        <p>
-        <div class="container">
-          <h2>About Us</h2>
-          <hr class="hr-primary w-15 hr-xl ml-0 mb-5">
-          <div class="row">
-            <div class="col-sm-8">
-              <h2>About MENA AGE</h2>
-              <h4>Lorem ipsum..</h4>
-              <p>Lorem ipsum..</p>
-              <a href="/contactus" class="btn rounded-lg text-light">Get in Touch</a>
-            </div>
-            <div class="col-sm-4">
-              <span><img src="https://swanipro.com/wp-content/uploads/2020/12/Screen-Shot-2020-12-09-at-8.30.57-PM-1.png"
-                  width="200rem" /></span>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-4">
-              <span class="glyphicon glyphicon-globe logo"></span>
-            </div>
-            <div class="col-sm-8">
-              <h2>Our Values</h2>
-              <h4><strong>MISSION:</strong> Our mission lorem ipsum..</h4>
-              <p><strong>VISION:</strong> Our vision Lorem ipsum..</p>
-            </div>
-          </div>
+    <p>
+    <div class="container">
+      <h2>About Us</h2>
+      <hr class="hr-primary w-15 hr-xl ml-0 mb-5">
+      <div class="row">
+        <div class="col-sm-8">
+          <h2>About MENA AGE</h2>
+          <h4>Lorem ipsum..</h4>
+          <p>Lorem ipsum..</p>
+          <a href="/contactus" class="btn rounded-lg text-light">Get in Touch</a>
         </div>
-        </p>
+        <div class="col-sm-4">
+          <span><img src="https://swanipro.com/wp-content/uploads/2020/12/Screen-Shot-2020-12-09-at-8.30.57-PM-1.png"
+              width="200rem" /></span>
+        </div>
       </div>
-      <div id="team">
-        <div class="container">
-          <section>
-            <div class="container py-7">
-              <h2>
-                Our Team <i class="ion-ios-body pl-1 text-primary op-8 z-index-1"></i>
-              </h2>
-              <hr class="hr-primary w-15 hr-xl ml-0 mb-5">
+      <div class="row">
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-globe logo"></span>
+        </div>
+        <div class="col-sm-8">
+          <h2>Our Values</h2>
+          <h4><strong>MISSION:</strong> Our mission lorem ipsum..</h4>
+          <p><strong>VISION:</strong> Our vision Lorem ipsum..</p>
+        </div>
+      </div>
+    </div>
+    </p>
+  </div>
+  <div id="team">
+    <div class="container">
+      <section>
+        <div class="container py-7">
+          <h2>
+            Our Team <i class="ion-ios-body pl-1 text-primary op-8 z-index-1"></i>
+          </h2>
+          <hr class="hr-primary w-15 hr-xl ml-0 mb-5">
+          <div class="row mb-5">
+            <% team.forEach(teamMember=>{ %>
               <div class="row mb-5">
-                <% team.forEach(teamMember=>{ %>
-                      <div class="row mb-5">
-                        <div class="col-md-6 order-md-2">
-                          <img src="../public/teamImages/Hadil.jpg" alt=" <%= teamMember.name%>"
-                            class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
-                        </div>
-                        <div class="col-md-6 flex-valign text-md-right">
-                          <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
-                            <%= teamMember.name%>
-                          </h3>
-                          <h5 class="my-0 font-weight-normal">
-                            <em><%= teamMember.position%></em>
-                          </h5>
-                          <hr class="hr-primary w-70 ml-0 ml-md-auto mr-md-0 mb-3">
-                          <p><%= teamMember.details%></p>
-                        </div>
-                  </div>
-                  <% }) %>
+                <div class="col-md-6 order-md-2">
+                  <img src="../public/teamImages/Hadil.jpg" alt=" <%= teamMember.name%>"
+                    class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
+                </div>
+                <div class="col-md-6 flex-valign text-md-right">
+                  <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+                    <%= teamMember.name%>
+                  </h3>
+                  <h5 class="my-0 font-weight-normal">
+                    <em>
+                      <%= teamMember.position%>
+                    </em>
+                  </h5>
+                  <hr class="hr-primary w-70 ml-0 ml-md-auto mr-md-0 mb-3">
+                  <p>
+                    <%= teamMember.details%>
+                  </p>
+                </div>
+              </div>
+              <% }) %>
                 <!-- <div class="col-md-6 order-md-2">
                   <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Personal Trainer 1"
                     class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
@@ -101,56 +77,50 @@
                   <p>Adipiscing nimis sed tego turpis. Abico genitus quadrum qui singularis te.</p>
                 </div>
               </div> -->
-            </div>
-          </section>
-        </div>
-      </div>
-      <div id="partners">
-        <div class="container">
-          <h2>Our Partners</h2>
-          <hr class="hr-primary w-15 hr-xl ml-0 mb-5">
-          <div class="row">
-            <div class="col-sm-4">
-              <span class="glyphicon glyphicon-off logo-small">LOGO</span>
-              <h4>Lorem</h4>
-              <p>Lorem ipsum dolor sit amet..</p>
-            </div>
-            <div class="col-sm-4">
-              <span class="glyphicon glyphicon-heart logo-small">LOGO</span>
-              <h4>LOVE</h4>
-              <p>Lorem ipsum dolor sit amet..</p>
-            </div>
-            <div class="col-sm-4">
-              <span class="glyphicon glyphicon-lock logo-small">LOGO</span>
-              <h4>JOB DONE</h4>
-              <p>Lorem ipsum dolor sit amet..</p>
-            </div>
           </div>
-          <br><br>
-          <div class="row">
-            <div class="col-sm-4">
-              <span class="glyphicon glyphicon-leaf logo-small">LOGO</span>
-              <h4>GREEN</h4>
-              <p>Lorem ipsum dolor sit amet..</p>
-            </div>
-            <div class="col-sm-4">
-              <span class="glyphicon glyphicon-certificate logo-small">LOGO</span>
-              <h4>CERTIFIED</h4>
-              <p>Lorem ipsum dolor sit amet..</p>
-            </div>
-            <div class="col-sm-4">
-              <span class="glyphicon glyphicon-wrench logo-small">LGOG</span>
-              <h4>Lorem</h4>
-              <p>Lorem ipsum dolor sit amet..</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-
-      <%- include('partials/_footer') %>
+      </section>
+    </div>
   </div>
-</body>
+  <div id="partners">
+    <div class="container">
+      <h2>Our Partners</h2>
+      <hr class="hr-primary w-15 hr-xl ml-0 mb-5">
+      <div class="row">
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-off logo-small">LOGO</span>
+          <h4>Lorem</h4>
+          <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-heart logo-small">LOGO</span>
+          <h4>LOVE</h4>
+          <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-lock logo-small">LOGO</span>
+          <h4>JOB DONE</h4>
+          <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-leaf logo-small">LOGO</span>
+          <h4>GREEN</h4>
+          <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-certificate logo-small">LOGO</span>
+          <h4>CERTIFIED</h4>
+          <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-wrench logo-small">LGOG</span>
+          <h4>Lorem</h4>
+          <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+      </div>
 
-</html>
+    </div>
+  </div>
+</div>

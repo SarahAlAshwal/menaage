@@ -2,6 +2,7 @@ const express = require("express");
 const methodOverride= require('method-override');
 const app = express();
 const mongoose = require('mongoose');
+const expressLayouts = require("express-ejs-layouts");
 
 // routes
 const speakUPRouter = require('./routes/speakUp');
@@ -14,10 +15,13 @@ const submitYourWork = require('./routes/getInvolved/submitYourWrok');
 const adminRouter = require('./routes/admin');
 
 
-
-app.use(express.static(__dirname + '/views/'));
-
 app.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/views/'));
+app.set("layout", "layouts/layout");
+app.use(expressLayouts);
+app.use(express.static("public"));
+
+
 app.use(express.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
 
