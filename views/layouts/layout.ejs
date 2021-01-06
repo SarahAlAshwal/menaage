@@ -20,30 +20,20 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="../styles/styles.css">
   </link>
   <!-- App JS -->
   <title>MENA AGE</title>
 </head>
 
 <body class="body">
-
+  <%- include('../partials/_header') %>
   <div class="container">
-    <%- include('../partials/_header') %>
-      <div class="mainContiner">
-        <%- body %>
-        <div>
-          <div>
-            <%- include('../partials/_sider')%>
-          </div>
-          <div>
-            <%- include('../partials/_get_updated')%>
-          </div>
-        </div>
-      </div>
-
-      <%- include('../partials/_footer') %>
+   
+    <%- body %>
+    
   </div>
+  <%- include('../partials/_footer') %>
 </body>
 
 </html>

@@ -29,59 +29,64 @@
     </div>
     </p>
   </div>
+  
   <div id="team">
-    <div class="container">
-      <section>
-        <div class="container py-7">
-          <h2>
-            Our Team <i class="ion-ios-body pl-1 text-primary op-8 z-index-1"></i>
-          </h2>
-          <hr class="hr-primary w-15 hr-xl ml-0 mb-5">
-          <div class="row mb-5">
-            <% team.forEach(teamMember=>{ %>
-              <div class="row mb-5">
-                <div class="col-md-6 order-md-2">
-                  <img src="../public/teamImages/Hadil.jpg" alt=" <%= teamMember.name%>"
-                    class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
+    <br/> <br/>
+      <div class="container">
+        <section>
+          <div class="container py-7">
+            <h2>
+              Our Team <i class="ion-ios-body pl-1 text-primary op-8 z-index-1"></i>
+            </h2>
+            <hr class="hr-primary w-15 hr-xl ml-0 mb-5">
+            <div class="row mb-5">
+              <% team.forEach(teamMember=>{ %>
+                <div class="row mb-5">
+                  <div class="col-md-6 order-md-2">
+                    <img src="../public/teamImages/Hadil.jpg" alt=" <%= teamMember.name%>"
+                      class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
+                  </div>
+                  <div class="col-md-6 flex-valign text-md-right">
+                    <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+                      <%= teamMember.name%>
+                    </h3>
+                    <h5 class="my-0 font-weight-normal">
+                      <em>
+                        <%= teamMember.position%>
+                      </em>
+                    </h5>
+                    <hr class="hr-primary w-70 ml-0 ml-md-auto mr-md-0 mb-3">
+                    <p>
+                      <%= teamMember.details%>
+                    </p>
+                  </div>
                 </div>
-                <div class="col-md-6 flex-valign text-md-right">
-                  <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
-                    <%= teamMember.name%>
-                  </h3>
-                  <h5 class="my-0 font-weight-normal">
-                    <em>
-                      <%= teamMember.position%>
-                    </em>
-                  </h5>
-                  <hr class="hr-primary w-70 ml-0 ml-md-auto mr-md-0 mb-3">
-                  <p>
-                    <%= teamMember.details%>
-                  </p>
-                </div>
-              </div>
-              <% }) %>
-                <!-- <div class="col-md-6 order-md-2">
-                  <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Personal Trainer 1"
-                    class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
-                </div>
-                <div class="col-md-6 flex-valign text-md-right">
-                  <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
-                    Mike Jones
-                  </h3>
-                  <h5 class="my-0 font-weight-normal">
-                    <em>Strength Coach</em>
-                  </h5>
-                  <hr class="hr-primary w-70 ml-0 ml-md-auto mr-md-0 mb-3">
-                  <p>Aptent dolore enim facilisi humo magna melior nisl occuro. Ad os sed utinam. Accumsan autem
-                    brevitas esse exerci ludus ratis.</p>
-                  <p>Adipiscing nimis sed tego turpis. Abico genitus quadrum qui singularis te.</p>
-                </div>
-              </div> -->
-          </div>
-      </section>
+                <% }) %>
+                  <!-- <div class="col-md-6 order-md-2">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Personal Trainer 1"
+                      class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
+                  </div>
+                  <div class="col-md-6 flex-valign text-md-right">
+                    <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+                      Mike Jones
+                    </h3>
+                    <h5 class="my-0 font-weight-normal">
+                      <em>Strength Coach</em>
+                    </h5>
+                    <hr class="hr-primary w-70 ml-0 ml-md-auto mr-md-0 mb-3">
+                    <p>Aptent dolore enim facilisi humo magna melior nisl occuro. Ad os sed utinam. Accumsan autem
+                      brevitas esse exerci ludus ratis.</p>
+                    <p>Adipiscing nimis sed tego turpis. Abico genitus quadrum qui singularis te.</p>
+                  </div>
+                </div> -->
+            </div>
+        </section>
+      </div>
     </div>
-  </div>
+ 
+  
   <div id="partners">
+    <br/> <br/>
     <div class="container">
       <h2>Our Partners</h2>
       <hr class="hr-primary w-15 hr-xl ml-0 mb-5">
