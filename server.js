@@ -4,6 +4,9 @@ const app = express();
 const mongoose = require('mongoose');
 const expressLayouts = require("express-ejs-layouts");
 
+//db
+const Details = require('./models/details');
+
 // routes
 const speakUPRouter = require('./routes/speakUp');
 const articlesRouter = require('./routes/blog/articles');
@@ -35,7 +38,8 @@ mongoose.connection.once('open', ()=> {
 
 
 app.get('/', async (req, res) => {
-  res.render('home');
+  const details = await Details.find()
+  res.render('home', {details:details[0]});
   
 })
 

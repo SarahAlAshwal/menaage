@@ -1,14 +1,22 @@
 <h1 class="mb-4">Dashboard</h1>
-<%- include('adminLiveInterviews')%>
-<%- include('adminArticles') %>
-<%- include('adminEducationalVideos') %>
-<%- include('adminTeam') %>
+<div class="container">
+  <%- include('adminLiveInterviews')%>
+  <%- include('adminArticles') %>
+  <%- include('adminEducationalVideos') %>
+  <%- include('adminTeam') %>
 
-<div class="card-body ">
-  <form class="form-group" action="/admin/aboutus" method="POST">
-    <label for="mission">Mission</label>
-    <input type="text" name="mession" id="mission" class="form-control">
-    <a href="/admin" class="btn btn-secondary">Cancel</a>
-    <button type="submit" class="btn btn-primary">Save</button>
-  </form>
+  <div class="card-body ">
+    <form class="form-group" action="/admin/details?_method=PUT" method="POST">
+      <label for="mission">Mission</label>
+      <textarea type="text" name="ourMession" id="mission" class="form-control"></textarea>
+      <label for="aboutUs">About us</label>
+      <textarea  type="text" name="aboutUs" id="AboutUs" class="form-control"></textarea>
+      <label for="adminEmail">Admin Email</label>
+      <input type="text" name="adminEmail" id="adminEmail" class="form-control">
+      <label for="adminPass">Admin Password</label>
+      <input type="password" name="adminPass" id="adminPass" class="form-control">
+      <a href="/admin" class="btn btn-secondary mt-3 ">Cancel</a>
+      <button type="submit" class="btn btn-primary mt-3">Save</button>
+    </form>
+  </div>
 </div>

@@ -1,5 +1,4 @@
-const mongoose = require('mongoose')
-const { text } = require('body-parser')
+const mongoose = require('mongoose');
 
 const teamSchema = new mongoose.Schema({
   name: {
