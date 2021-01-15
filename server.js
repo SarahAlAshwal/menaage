@@ -1,3 +1,8 @@
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
+
+
 const express = require("express");
 const methodOverride= require('method-override');
 const app = express();
@@ -30,7 +35,7 @@ app.use(methodOverride('_method'));
 
 
 //to start the db sudo service mongod start
-mongoose.connect('mongodb://localhost/mena', { useNewUrlParser: true ,  useUnifiedTopology: true, useCreateIndex: true});
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true ,  useUnifiedTopology: true, useCreateIndex: true});
 
 mongoose.connection.once('open', ()=> {
   console.log('connected to the database');
