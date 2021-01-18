@@ -10,7 +10,12 @@ const teamSchema = new mongoose.Schema({
     required: true
   },
   image: {
-    type: String
+    type: Buffer,
+    required: true
+  },
+  imageType:{
+    type: String,
+    required: true
   },
   position: {
     type: String
@@ -18,7 +23,12 @@ const teamSchema = new mongoose.Schema({
   details: {
     type: String,
   }
-})
+});
 
+teamSchema.virtual('imagePath').get(function() {
+  if (this.image != null && this.imageType != null) {
+    return `data:${this.imageType};charset=utf-8;base64,${this.image.toString('base64')}`
+  }
+});
 
 module.exports = mongoose.model('Team', teamSchema)

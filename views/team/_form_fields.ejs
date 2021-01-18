@@ -7,10 +7,6 @@
   <input required value="<%= team.teamId %>" type="number" name="teamId" id="teamId" class="form-control">
 </div>
 <div class="form-group">
-  <label for="image">Image Link</label>
-  <input required value="<%= team.image %>" type="text" name="image" id="image" class="form-control">
-</div>
-<div class="form-group">
   <label for="position">Position</label>
   <input required value="<%= team.position %>" type="text" name="position" id="position" class="form-control">
 </div>
@@ -19,6 +15,10 @@
   <textarea required name="details" id="details" class="form-control">
     <%= team.details %>
   </textarea>
+</div>
+<div class="form-group">
+  <label for="details">Image</label>
+  <input required value="<%= team.imagePath %>" type="file" name="image" id="image" class="filepond">
 </div>
 
 <a href="/admin" class="btn btn-secondary">Cancel</a>

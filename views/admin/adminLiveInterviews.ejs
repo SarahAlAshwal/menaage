@@ -1,52 +1,47 @@
 <h2 class="mb-4">Live Interviews</h2>
-      <a href="/admin/liveInterviews/new" class=" btn ">
-        New Live Interview</a>
-      <% liveInterviews.forEach(liveInterview=>{ %>
+<a href="/admin/liveInterviews/new" class=" btn ">
+  New Live Interview</a>
+<% liveInterviews.forEach(liveInterview=>{ %>
 
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-12 mt-3">
-              <div class="card">
-                <div class="card-horizontal">
-                  <div class="img-square-wrapper">
-                    <!-- https://img.youtube.com/vi/<insert-youtube-video-id-here>/mqdefault.jpg
- -->
-                    <!-- <img class="" src="<%=liveInterview.thumbnail%>" alt="Card image cap"> -->
-                    <img class="" src="https://img.youtube.com/vi/%3Cinsert-youtube-video-id-here%3E/mqdefault.jpg"
-                      alt="Card image cap">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 mt-3">
+        <div class="card">
+          <div class="card-horizontal">
+            <div class="img-square-wrapper">
+              <img class="" src="<%=liveInterview.thumbnailPath%>" alt="Card image cap">
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <a href="<%=liveInterview.videoUrl%>">
+                    <h4 class="card-title">
+                      <%=liveInterview.title%>
+                    </h4>
+                  </a>
+
+                  <div class="card-subtitle text-muted mb-2">
+                    <%=liveInterview.createdAt.toLocaleDateString()%>
                   </div>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col">
-                    <a href="<%=liveInterview.videoUrl%>">
-                      mb-5       <h4 class="card-title">
-                        <%=liveInterview.title%>
-                      </h4>
-                    </a>
-                    
-                        <div class="card-subtitle text-muted mb-2">
-                          <%=liveInterview.createdAt.toLocaleDateString()%>
-                        </div>
-                        <p class="card-text">
-                          <%=liveInterview.description%>
-                        </p>
+                  <p class="card-text">
+                    <%=liveInterview.description%>
+                  </p>
 
-                      </div>
-                      <div class="col-sm-4">
-                        <a href="/admin/liveInterviews/edit/<%= liveInterview.id %>" class="btn btn-info mb-2">
-                        Edit</a>
-                        <form action="/admin/liveInterviews/<%= liveInterview.id%>?_method=DELETE " method="POST" class="d-inline">
-                          <button type="submit" class="btn btn-danger">Delete</button>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-
+                </div>
+                <div class="col-sm-4">
+                  <a href="/admin/liveInterviews/edit/<%= liveInterview.id %>" class="btn btn-info mb-2">
+                    Edit</a>
+                  <form action="/admin/liveInterviews/<%= liveInterview.id%>?_method=DELETE " method="POST"
+                    class="d-inline">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                  </form>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
-        <% }) %>
-
-        
+      </div>
+    </div>
+  </div>
+  <% }) %>

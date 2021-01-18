@@ -6,6 +6,7 @@ const EducationalVideos = require("../models/educationalVideos");
 const Team = require("../models/team");
 const Details = require("../models/details");
 const bcrypt = require('bcrypt');
+const imageMimeTypes = ['image/jpeg', 'image/png', 'images/gif'];
 
 router.get("/", async (req, res) => {
   const articles = await Article.find().sort({ createdAt: "desc" }); //gives all the articles
@@ -208,8 +209,7 @@ function saveInterviewAndRedirict(path) {
     liveInterview.title = req.body.title;
     liveInterview.description = req.body.description;
     liveInterview.videoUrl = req.body.videoUrl;
-    liveInterview.thumbnail = req.body.thumbnail;
-
+    saveThumbnail(liveInterview , req.body.thumbnail);
     try {
       liveInterview = await liveInterview.save();
       res.redirect(`/admin`);
@@ -224,10 +224,10 @@ function saveTeamAndRedirect(path) {
   return async (req, res) => {
     let team = req.team;
     team.name = req.body.name;
-    team.image = req.body.image;
     team.teamId = req.body.teamId;
     team.position = req.body.position;
     team.details = req.body.details;
+    saveImage(team , req.body.image);
     try {
       team = await team.save();
       res.redirect("/admin");
@@ -261,7 +261,22 @@ function saveDetailsAndRedirect() {
     }
   };
 }
-
+function saveThumbnail(liveInterview, thumbnailEncoded) {
+  if (thumbnailEncoded == null) return;
+  const thumbnail = JSON.parse(thumbnailEncoded);
+  if (thumbnail != null && imageMimeTypes.includes(thumbnail.type)) {
+    liveInterview.thumbnail = new Buffer.from(thumbnail.data, "base64");
+    liveInterview.thumbnailType = thumbnail.type;
+  }
+}
+function saveImage(team, imageEncoded) {
+  if (imageEncoded == null) return;
+  const image = JSON.parse(imageEncoded);
+  if (image != null && imageMimeTypes.includes(image.type)) {
+    team.image = new Buffer.from(image.data, "base64");
+    team.imageType = image.type;
+  }
+}
 
 module.exports = router;
 
