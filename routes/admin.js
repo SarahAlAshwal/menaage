@@ -240,8 +240,8 @@ function saveTeamAndRedirect(path) {
 function saveDetailsAndRedirect() {
   return async (req, res) => {
     let details = req.details[0];
-    if (req.body.mession)
-      details.ourMission = req.body.mession;
+    if (req.body.ourMession)
+      details.ourMission = req.body.ourMession;
     if (req.body.aboutUs)
       details.aboutUs = req.body.aboutUs;
     if(req.body.adminEmail){
