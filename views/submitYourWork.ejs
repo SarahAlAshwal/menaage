@@ -9,13 +9,14 @@
           <br />
           <br />
          
-            <select class="custom-select" id="inputGroupSelect01" name="category">
+            <select class="custom-select mb-3" id="inputGroupSelect01" name="category">
               <option selected>None</option>
               <option value="article">Article</option>
               <option value="story">Story</option>
               <option value="poem">Poem</option>
               <option value="video">Video</option>
-              <option value="art">Art</option>
+              <option value="art">Piece of Art</option>
+              <option value="other">Others</option>
             </select>
           
   
@@ -24,14 +25,10 @@
         <div class="mb-3">
           <textarea type="text" name="message" class="form-control" id="story" placeholder="Message"></textarea>
         </div>
+        <input type=text name= 'email' class= 'form-control mb-3' id="email" placeholder="Email" required>
         <input type="file" name="myfile"/>
-        <div class="mb-3 form-check">
-          <p>* Note:</p>
-          <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
-            previewing layouts.</p>
-        </div>
         <div class="center">
-          <button type="submit" class="btn send">Send</button>
+          <button type="submit" class="btn send mt-3 mb-3">Send</button>
         </div>
 
       </form>

@@ -30,7 +30,8 @@ router.post('/',upload.single("myfile"), async(req,res) => {
       to: "sarahalashwal@yahoo.com",
       subject: "New shared work",
       html: `<h1>category: ${req.body.category}</h1>
-              <h2>${req.body.title}</h2>
+              <h2>title: ${req.body.title}</h2>
+              <h3>Email: ${req.body.email}</h3>
               <p>${req.body.message}</p>`,
       attachments: {
         path: `${__dirname}/attachment/${req.file.filename}`

@@ -64,8 +64,8 @@ button.btn.send{
   padding: 0.4rem;
 }
 .logo_footer{
-  width: 220px;
-  height: 220px;
+  width: 170px;
+  height: 170px;
   border-radius: 100%;
   margin: 1rem;
 }
@@ -285,3 +285,11 @@ ul.social-network li {
   background-color: #F9F9F9;
 }
 /* footer end */
+
+/*To make any part invisible*/
+
+.invisible {
+  visibility: hidden;
+  position: absolute;
+  top: -9999px;
+}
