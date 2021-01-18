@@ -9,23 +9,23 @@
           <h2>About MENA AGE</h2>
           <h4>Lorem ipsum..</h4>
           <p><%=details.aboutUs%></p>
-          <a href="/contactus" class="btn rounded-lg text-light">Get in Touch</a>
         </div>
-        <div class="col-sm-4">
-          <span><img src="https://swanipro.com/wp-content/uploads/2020/12/Screen-Shot-2020-12-09-at-8.30.57-PM-1.png"
-              width="200rem" /></span>
-        </div>
-      </div>
-      <div class="row">
+      
+      <!-- <div class="row">
         <div class="col-sm-4">
           <span class="glyphicon glyphicon-globe logo"></span>
-        </div>
+        </div> -->
         <div class="col-sm-8">
           <h2>Our Values</h2>
           <h4><strong>MISSION:</strong> <%=details.ourMission%></h4>
           <p><strong>VISION:</strong> Our vision Lorem ipsum..</p>
         </div>
+      <!-- </div> -->
+      <div class="col-sm-8">
+        <a href="/contactus" class="btn rounded-lg text-light">Get in Touch</a>
       </div>
+     
+    </div>
     </div>
     </p>
   </div>
@@ -46,8 +46,8 @@
                     <img src="../public/teamImages/Hadil.jpg" alt=" <%= teamMember.name%>"
                       class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
                   </div>
-                  <div class="col-md-6 flex-valign text-md-right">
-                    <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+                  <div class="col-md-6 flex-valign">
+                    <h3 class=" text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
                       <%= teamMember.name%>
                     </h3>
                     <h5 class="my-0 font-weight-normal">
@@ -85,7 +85,7 @@
     </div>
  
   
-  <div id="partners">
+  <div id="partners" class = 'invisible'>
     <br/> <br/>
     <div class="container">
       <h2>Our Partners</h2>
